@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/*
+    Changjie Chinese Input Method for Android
+    Copyright (C) 2012 LinkOmnia Ltd.
+
+    Author: Wan Leung Wong (wanleung@linkomnia.com)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" 
+        package="com.linkomnia.android.Changjie"
+        android:versionCode="3"
+      	android:versionName="@string/ime_version">
+        >
+    <uses-sdk android:minSdkVersion="14" />
+    <application android:label="@string/ime_name"
+        	android:icon="@drawable/ic_launcher"
+        	android:debuggable="false"
+        	>
+        <service android:name="com.linkomnia.android.Changjie.ChangjieIME"
+                android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data android:name="android.view.im" android:resource="@xml/method" />
+        </service>
+        
+        <activity android:name="Setting" android:label="@string/ime_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        
+        
+    </application>
+</manifest>

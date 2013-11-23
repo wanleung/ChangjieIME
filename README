@@ -1,0 +1,41 @@
+Changjie Chinese Input Method for Android
+
+This is an implementation of Changjie Chinese Input Method for elders and kids on Android Platform.
+
+
+/*
+    Changjie Chinese Input Method for Android
+    Copyright (C) 2012 LinkOmnia Ltd.
+
+    Author: Wan Leung Wong (wanleung@linkomnia.com)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "ecr" ORDER BY chchar DESC;
+沿|ecr|21641
+sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "pkr" ORDER BY chchar DESC;
+㤑|pkr|0
+sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=3 AND code GLOB "pkr" ORDER BY chchar DESC;
+㤑|pkr|0
+sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=3 AND code GLOB "okr" ORDER BY chchar DESC;
+知|okr|21568
+佑|okr|22536
+sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY chchar DESC;
+知|okr|21568
+佑|okr|22536
+sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY chchar;
+佑|okr|22536
+知|okr|21568
+

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/*
+    Changjie Chinese Input Method for Android
+    Copyright (C) 2012 LinkOmnia Ltd.
+
+    Author: Wan Leung Wong (wanleung@linkomnia.com)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="10%p"
+    android:horizontalGap="0px"
+    android:verticalGap="@dimen/key_verticalgap"
+    android:keyHeight="@dimen/key_height"
+    >
+    
+    <Row>
+        <Key android:keyLabel="\u3021" android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="\u3022"/>
+        <Key android:keyLabel="\u3023"/>
+        <Key android:keyLabel="\u3024"/>
+        <Key android:keyLabel="\u3025"/>
+        <Key android:keyLabel="\u3026"/>
+        <Key android:keyLabel="\u3027"/>
+        <Key android:keyLabel="\u3028"/>
+        <Key android:keyLabel="\u3029"/>
+        <Key android:keyLabel="\u3007" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:keyLabel="\u300c" android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="\u300d"/>
+        <Key android:keyLabel="\u300e"/>
+        <Key android:keyLabel="\u300f"/>
+        <Key android:keyLabel="\u201c"/>
+        <Key android:keyLabel="\u201d"/>     
+        <Key android:keyLabel="\u3014"/>
+        <Key android:keyLabel="\u3015"/>
+        <Key android:keyLabel="\u300a"/>
+        <Key android:keyLabel="\u300b" android:keyEdgeFlags="right"/>
+    </Row>
+    
+    <Row>
+        <Key android:keyLabel="\uff1a" android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="\uff1b"/>
+        <Key android:keyLabel="\u2026"/>
+        <Key android:keyLabel="\u3010"/>
+        <Key android:keyLabel="\u3011"/>
+        <Key android:keyLabel="\u3008"/>
+        <Key android:keyLabel="\u3009"/>
+        <Key android:keyLabel="\u2014"/>
+        <Key android:codes="-5" android:keyIcon="@drawable/key_delete"
+                android:keyWidth="20%p" android:isRepeatable="true"
+                android:keyEdgeFlags="right"/>
+    </Row>
+    
+    <Row android:rowEdgeFlags="bottom">
+        <Key android:codes="-3" android:keyIcon="@drawable/key_done" 
+                android:keyWidth="10%p" android:keyEdgeFlags="left"/>
+        <Key android:codes="-300" android:keyIcon="@drawable/key_char" 
+                android:keyWidth="15%p"/>
+        <Key android:codes="32" android:keyIcon="@drawable/key_space" 
+                android:keyWidth="40%p" android:isRepeatable="true"/>
+        <Key android:codes="-600" android:keyIcon="@drawable/key_lang"
+        		android:keyWidth="15%p"/>
+        <Key android:codes="10" android:keyIcon="@drawable/key_enter" 
+                android:keyWidth="20%p" android:keyEdgeFlags="right"/>
+    </Row>
+    
+</Keyboard>
