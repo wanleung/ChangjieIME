@@ -178,13 +178,14 @@ public class ChangjieIME extends InputMethodService implements
         this.charbuffer = new char[5];
         this.strokecount = 0;
         if (this.candidateView != null) {
+        	this.updateInputCode(new String(this.charbuffer,0,this.strokecount));
             this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
             this.updateCandidates(new ArrayList<String>());
         }
     }
     
     private void handleKey(int keyCode, int[] keyCodes) {
-        if (this.imeSwitch.isChinese() && (keyCode >= 1001 && keyCode <= 1005 ) ) {
+        if (this.imeSwitch.isChinese() && (keyCode >= 'a' && keyCode <= 'z' ) ) {
             this.typingStroke(keyCode);
         } else {
             this.handleCharacter(keyCode, keyCodes);
@@ -192,36 +193,12 @@ public class ChangjieIME extends InputMethodService implements
     }
     
     private void typingStroke(int keycode) {
-        char c;
-        switch (keycode) {
-            case 1001: {
-                c = 'm';
-                break;
-            }
-            case 1002: {
-                c = '/';
-                break;
-            }
-            case 1003: {
-                c = ',';
-                break;
-            }
-            case 1004: {
-                c = '.';
-                break;
-            }
-            case 1005: {
-                c = 'n';
-                break;
-            }
-            default: {
-                c = '*';
-            }
-        }
+        char c = (char)keycode;
         if (this.strokecount < 5) {
             this.charbuffer[this.strokecount++] = c;
         }
         this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
+        this.updateInputCode(new String(this.charbuffer,0,this.strokecount));
         ArrayList<String> words = this.wordProcessor.getChineseWordDictArrayList(new String(this.charbuffer,0,this.strokecount));
         updateCandidates(words);
     }
@@ -231,6 +208,7 @@ public class ChangjieIME extends InputMethodService implements
             if (this.strokecount > 1) {
                 this.strokecount -= 1;
                 this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));
+                this.updateInputCode(new String(this.charbuffer,0,this.strokecount));
                 ArrayList<String> words = this.wordProcessor.getChineseWordDictArrayList(new String(this.charbuffer,0,this.strokecount));
                 updateCandidates(words);
             } else if (this.strokecount > 0) {
@@ -294,4 +272,9 @@ public class ChangjieIME extends InputMethodService implements
         inputView.closing();
     }
 
+    private void updateInputCode(String code) {
+        InputConnection ic = getCurrentInputConnection();
+        String output = WordProcessor.translateToChangjieCode(code);
+        ic.setComposingText(output, output.length());
+    }
 }

@@ -73,7 +73,7 @@
         <Key android:codes="-3" android:keyIcon="@drawable/key_done" 
                 android:keyWidth="10%p" android:keyEdgeFlags="left"/>
         <Key android:codes="-2" android:keyLabel="123" android:keyWidth="15%p"/>
-        <Key android:codes="12288" android:keyIcon="@drawable/key_space" 
+        <Key android:codes="32" android:keyIcon="@drawable/key_space" 
                 android:keyWidth="40%p" android:isRepeatable="true"/>
         <Key android:codes="-300" android:keyIcon="@drawable/key_lang" android:keyWidth="15%p"/>
         <Key android:codes="10" android:keyIcon="@drawable/key_enter" 

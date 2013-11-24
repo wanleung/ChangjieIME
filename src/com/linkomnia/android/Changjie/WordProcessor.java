@@ -34,21 +34,52 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.linkomnia.android.Changjie.R;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.util.Log;
 
 
 public class WordProcessor {
+	
+	static final String [] cangjie_radicals = {
+		    "日", // 日
+		    "月", // 月
+		    "金", // 金
+		    "木", // 木
+		    "水", // 水
+		    "火", // 火
+		    "土", // 土
+		    "竹", // 竹
+		    "戈", // 戈
+		    "十", // 十
+		    "大", // 大
+		    "中", // 中
+		    "一", // 一
+		    "弓", // 弓
+		    "人", // 人
+		    "心", // 心
+		    "手", // 手
+		    "口", // 口
+		    "尸", // 尸
+		    "廿", // 廿
+		    "山", // 山
+		    "女", // 女
+		    "田", // 田
+		    "難", // 難
+		    "卜", // 卜
+		    "Ｚ", // Ｚ
+	};
     
     private Context ctx;
     
     private ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>> chineseWordDict;
     
-    
     private ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>> chinesePhraseDict;
     
-    private DatabaseHelper dbh;
+    private ChangjieDatabaseHelper dbh;
+    private SQLiteDatabase changjieDB;
     
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public WordProcessor(Context ctx) {
@@ -56,11 +87,13 @@ public class WordProcessor {
         chineseWordDict = new ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>();
         chinesePhraseDict = new ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>();
         
-        dbh = new DatabaseHelper(ctx);
+        dbh = new ChangjieDatabaseHelper(ctx);
     }
     
     public void init() {
         new ImportFilesTask().execute(this);
+        dbh.getReadableDatabase();
+        changjieDB = dbh.getDatabase();
     }
     
     @SuppressWarnings("unchecked")
@@ -70,11 +103,32 @@ public class WordProcessor {
     }
     
     public ArrayList<String> getChineseWordDictArrayList(String key) {
-        if (this.chineseWordDict.containsKey(key)) {
-            return new ArrayList<String>(this.chineseWordDict.get(key));
-        } else {
-            return new ArrayList<String>();
-        }
+    	
+    	ArrayList<String> result = new ArrayList<String>();
+    	String[] args =  {"5", key + "*"};
+    	String order = " frequency DESC ";
+    	String[] searchColumns = { "chchar", "code", "frequency" };
+    	//SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY frequency DESC;
+    	Cursor cursor = changjieDB.query("chars INNER JOIN codes on chars._id=codes._id",
+    			searchColumns, "version=? AND code GLOB ?", args, null, null, order );
+    		 
+    	cursor.moveToFirst();
+    	while (!cursor.isAfterLast()) {
+    		String ch = cursor.getString(cursor.getColumnIndex("chchar")) ;
+    		result.add(ch);
+    		Log.d("WANLEUNG", ch);
+    		cursor.moveToNext();
+    	}
+    	// Make sure to close the cursor
+    	cursor.close();
+    	return result;
+    
+    	
+        //if (this.chineseWordDict.containsKey(key)) {
+        //    return new ArrayList<String>(this.chineseWordDict.get(key));
+        //} else {
+        //    return new ArrayList<String>();
+        //}
     }
     
     @SuppressWarnings({ "rawtypes", "unchecked" })
@@ -112,5 +166,14 @@ public class WordProcessor {
             return totalSize;
         }
 
+    }
+    
+    static public String translateToChangjieCode(String code) {
+    	String result = "";
+    	for (int i = 0; i < code.length(); i++) {
+    		int index = code.charAt(i) - 'a';
+    		result += cangjie_radicals[index];
+    	}
+    	return result;
     }
 }

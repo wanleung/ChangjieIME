@@ -25,7 +25,7 @@
         android:versionCode="3"
       	android:versionName="@string/ime_version">
         >
-    <uses-sdk android:minSdkVersion="14" />
+    <uses-sdk android:minSdkVersion="10" />
     <application android:label="@string/ime_name"
         	android:icon="@drawable/ic_launcher"
         	android:debuggable="false"

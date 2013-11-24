@@ -42,14 +42,14 @@ public class CandidateView extends LinearLayout {
     private Context ctx;
     private Button leftButton;
     private Button rightButton;
-    private LinearLayout topbar;
-    private LinearLayout bottombar;
+    //private LinearLayout topbar;
+    //private LinearLayout bottombar;
     private LinearLayout wordbar;
     private ChangjieIME mDelegate;
     
     private int result_max;
     
-    private ArrayList<ImageButton> inputBox;
+    //private ArrayList<ImageButton> inputBox;
     private ArrayList<Button> wordbuttonList;
     private int wordlevel;
 
@@ -96,15 +96,15 @@ public class CandidateView extends LinearLayout {
 
         }
         
-        this.bottombar = (LinearLayout)this.findViewById(R.id.bottombar);
-        this.inputBox = new ArrayList<ImageButton>();
-        for (int i = 0; i < 5; i++) {
-            ImageButton b = new ImageButton(ctx);
-            b.setImageResource(R.drawable.stroke0_show);
-            b.setBackgroundColor(getResources().getColor(R.color.candidate_background));
-            this.inputBox.add(b);
-            this.bottombar.addView(b, lp);
-        }
+        //this.bottombar = (LinearLayout)this.findViewById(R.id.bottombar);
+        //this.inputBox = new ArrayList<ImageButton>();
+        //for (int i = 0; i < 5; i++) {
+        //    ImageButton b = new ImageButton(ctx);
+        //    b.setImageResource(R.drawable.stroke0_show);
+        //    b.setBackgroundColor(getResources().getColor(R.color.candidate_background));
+        //    this.inputBox.add(b);
+        //    this.bottombar.addView(b, lp);
+        //}
         
     }
 
@@ -138,6 +138,7 @@ public class CandidateView extends LinearLayout {
     }
     
     public void updateInputBox(String input) {
+    	/*
         for (int i = 0; i < 5; i++) {
             if (i<input.length()) {
                 switch (input.charAt(i)) {
@@ -169,7 +170,7 @@ public class CandidateView extends LinearLayout {
             } else {
                 this.inputBox.get(i).setImageResource(R.drawable.stroke0_show);
             }
-        }
+        }*/
     }
     
     protected void showWords() {
