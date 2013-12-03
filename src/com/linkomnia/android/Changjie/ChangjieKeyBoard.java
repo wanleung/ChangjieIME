@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- 
 /*
     Changjie Chinese Input Method for Android
     Copyright (C) 2012 LinkOmnia Ltd.
@@ -19,19 +17,26 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
--->
-<resources>
-    <string name="ime_name">ChangjieIME</string>
-    <string name="database_version">1</string>
-    <string name="result_max">5</string>
-    <string name="candidates_bottom_weight">3</string>
-    <string name="pref_about">About</string>
-    <string name="ime_version">0.1.1</string>
+
+package com.linkomnia.android.Changjie;
+
+import android.content.Context;
+import android.content.res.Resources;
+import android.content.res.XmlResourceParser;
+import android.inputmethodservice.Keyboard;
+import android.inputmethodservice.Keyboard.Key;
+import android.inputmethodservice.Keyboard.Row;
+import android.view.inputmethod.EditorInfo;
+
+public class ChangjieKeyBoard extends Keyboard {
+    public ChangjieKeyBoard(Context context, int xmlLayoutResId) {
+        super(context, xmlLayoutResId);
+    }
+
+    public ChangjieKeyBoard(Context context, int layoutTemplateResId, 
+            CharSequence characters, int columns, int horizontalPadding) {
+        super(context, layoutTemplateResId, characters, columns, horizontalPadding);
+    }
     
-    <string name="setting_version_header">Changjie Version</string>
-    <string name="setting_version_title">Use Version 5</string>
-    <string name="setting_version_summary">Default is using Version 3</string>
-    <string name="setting_filter_header">Filter</string>
-    <string name="setting_filter_simplify_title">Simplify Chinese</string>
-    <string name="setting_filter_simplify_summary">Enable Simplify Chinese</string>
-</resources>
+    
+}

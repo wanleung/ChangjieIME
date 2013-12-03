@@ -34,10 +34,12 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import com.linkomnia.android.Changjie.R;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 
@@ -81,6 +83,12 @@ public class WordProcessor {
     private ChangjieDatabaseHelper dbh;
     private SQLiteDatabase changjieDB;
     
+    private SharedPreferences sharedPrefs;
+     
+    private String defaultChangjieFilter = "big5 = 1 OR hkscs = 1 OR punct = 1 OR zhuyin = 1 OR katakana = 1 OR hiragana = 1 OR symbol = 1";
+
+    private String defaultChangjieVersion = "3"; 
+    
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public WordProcessor(Context ctx) {
         this.ctx = ctx;
@@ -88,6 +96,9 @@ public class WordProcessor {
         chinesePhraseDict = new ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>();
         
         dbh = new ChangjieDatabaseHelper(ctx);
+        
+        sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(ctx);
     }
     
     public void init() {
@@ -103,15 +114,27 @@ public class WordProcessor {
     }
     
     public ArrayList<String> getChineseWordDictArrayList(String key) {
+    	String filter = this.defaultChangjieFilter;
+        if (sharedPrefs.getBoolean("setting_filter_simplify", false)) {
+        	filter += " OR kanji = 1 ";
+        } 
+        String version = this.defaultChangjieVersion;
+        if (sharedPrefs.getBoolean("setting_version_5", false)) {
+        	version = "5";
+        }
     	
     	ArrayList<String> result = new ArrayList<String>();
-    	String[] args =  {"5", key + "*"};
-    	String order = " frequency DESC ";
+    	String[] args =  {version, key + "*"};
+    	String order = "code, frequency DESC ";
     	String[] searchColumns = { "chchar", "code", "frequency" };
     	//SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY frequency DESC;
-    	Cursor cursor = changjieDB.query("chars INNER JOIN codes on chars._id=codes._id",
-    			searchColumns, "version=? AND code GLOB ?", args, null, null, order );
-    		 
+    	//Cursor cursor = changjieDB.query("chars INNER JOIN codes on chars._id=codes._id",
+    	//		searchColumns, "version=? AND code GLOB ? AND (big5 = 0 OR hkscs = 0 OR punct = 0 OR zh = 0 OR zhuyin = 0 OR kanji = 0 OR katakana = 0 OR hiragana = 0 OR symbol = 0 )", args, null, null, order );
+    	Cursor cursor = changjieDB.query(true, "chars INNER JOIN codes on chars._id=codes._id", 
+    			searchColumns, "version = ? AND code GLOB ? AND ( "+ filter + " )", 
+    			args, null, null, order, "100");
+    	
+    	
     	cursor.moveToFirst();
     	while (!cursor.isAfterLast()) {
     		String ch = cursor.getString(cursor.getColumnIndex("chchar")) ;

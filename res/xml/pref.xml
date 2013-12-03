@@ -23,8 +23,32 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/ime_name">
     
-    <Preference android:key="about"
-        android:title="@string/pref_about"
-        android:persistent="false" />
-
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="choose_version"
+        android:title="@string/setting_version_header" >
+        <CheckBoxPreference
+            android:key="setting_version_5"
+            android:summary="@string/setting_version_summary"
+            android:title="@string/setting_version_title" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="choose_filter"
+        android:title="@string/setting_filter_header" >
+        <CheckBoxPreference
+            android:key="setting_filter_simplify"
+            android:summary="@string/setting_filter_simplify_summary"
+            android:title="@string/setting_filter_simplify_title" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="choose_about"
+        android:title="@string/pref_about" >
+    	<Preference android:key="about"
+        	android:title="@string/pref_about"
+        	android:persistent="false" />
+	</PreferenceCategory>
 </PreferenceScreen>
