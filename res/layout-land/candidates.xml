@@ -29,17 +29,6 @@
         android:gravity="fill"
         
         >
-
-    <LinearLayout
-        android:id="@+id/bottombar"
-        android:orientation="horizontal" 
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="fill"
-        android:layout_weight="4"
-        >
-        
-    </LinearLayout>
     
     <LinearLayout 
         android:id="@+id/topbar"

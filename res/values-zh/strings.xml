@@ -21,6 +21,15 @@
 */
 -->
 <resources>
-     <string name="ime_name">筆順五碼中文輸入法</string>
+     <string name="ime_name">倉頡中文輸入法</string>
      <string name="pref_about">關於本程式</string>
+     
+    <string name="setting_version_header">倉頡輸入法版本</string>
+    <string name="setting_version_title">使用倉頡第五代</string>
+    <string name="setting_version_summary">預定使用倉頡第三代</string>
+    <string name="setting_filter_header">附加字庫</string>
+    <string name="setting_filter_simplify_title">簡體中文</string>
+    <string name="setting_filter_simplify_summary">加入簡體中文字庫</string>
+    <string name="setting_quick_title">速成輸入</string>
+    <string name="setting_quick_summary">變更成為速成輸入</string>
 </resources>

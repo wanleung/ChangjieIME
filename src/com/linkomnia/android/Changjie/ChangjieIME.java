@@ -26,10 +26,12 @@ import java.util.List;
 import com.linkomnia.android.Changjie.R;
 
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.Keyboard.Key;
 import android.inputmethodservice.KeyboardView;
+import android.preference.PreferenceManager;
 import android.text.method.MetaKeyKeyListener;
 import android.util.Log;
 import android.view.KeyCharacterMap;
@@ -55,6 +57,8 @@ public class ChangjieIME extends InputMethodService implements
     
     private char [] charbuffer = new char[5];
     private int strokecount = 0;
+    
+    private SharedPreferences sharedPrefs;
 
     @Override
     public void onCreate() {
@@ -63,6 +67,8 @@ public class ChangjieIME extends InputMethodService implements
         //stroke5WordDictionary.open();
         this.wordProcessor = new WordProcessor(this);
         this.wordProcessor.init();
+        sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(this);
     }
 
     public void onInitializeInterface() {
@@ -194,7 +200,11 @@ public class ChangjieIME extends InputMethodService implements
     
     private void typingStroke(int keycode) {
         char c = (char)keycode;
-        if (this.strokecount < 5) {
+        int maxKeyNum = 5;
+        if (this.sharedPrefs.getBoolean("setting_quick", false)) {
+        	maxKeyNum = 2;
+        }
+        if (this.strokecount < maxKeyNum) {
             this.charbuffer[this.strokecount++] = c;
         }
         this.candidateView.updateInputBox(new String(this.charbuffer,0,this.strokecount));

@@ -19,7 +19,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
--->
+--><!-- 
 <com.linkomnia.android.Changjie.CandidateView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/candidate_view"
@@ -83,3 +83,4 @@
     </LinearLayout>
 
 </com.linkomnia.android.Changjie.CandidateView>
+-->

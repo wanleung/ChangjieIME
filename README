@@ -23,19 +23,3 @@ This is an implementation of Changjie Chinese Input Method for elders and kids o
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "ecr" ORDER BY chchar DESC;
-沿|ecr|21641
-sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "pkr" ORDER BY chchar DESC;
-㤑|pkr|0
-sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=3 AND code GLOB "pkr" ORDER BY chchar DESC;
-㤑|pkr|0
-sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=3 AND code GLOB "okr" ORDER BY chchar DESC;
-知|okr|21568
-佑|okr|22536
-sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY chchar DESC;
-知|okr|21568
-佑|okr|22536
-sqlite> SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY chchar;
-佑|okr|22536
-知|okr|21568
-

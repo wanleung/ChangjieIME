@@ -27,6 +27,7 @@
         >
     <uses-sdk android:minSdkVersion="10" />
     <application android:label="@string/ime_name"
+        	android:description="@string/ime_name"
         	android:icon="@drawable/ic_launcher"
         	android:debuggable="false"
         	>

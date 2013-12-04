@@ -31,6 +31,10 @@
             android:key="setting_version_5"
             android:summary="@string/setting_version_summary"
             android:title="@string/setting_version_title" />
+        <CheckBoxPreference
+            android:key="setting_quick"
+            android:summary="@string/setting_quick_summary"
+            android:title="@string/setting_quick_title" />
     </PreferenceCategory>
     
     <PreferenceCategory

@@ -23,7 +23,9 @@ package com.linkomnia.android.Changjie;
 import com.linkomnia.android.Changjie.R;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.inputmethodservice.Keyboard;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 public class IMESwitch {
@@ -40,14 +42,19 @@ public class IMESwitch {
     
     private boolean isFromChinese;
     
+    private SharedPreferences sharedPrefs;
+    
     public IMESwitch(Context ctx) {
         this.ctx = ctx;
         this.englishKeyboard = new IMEKeyboard(this.ctx, R.xml.qwert);
         this.enNumberSymbolKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_en);
         this.enSymoblShiftKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_en_shift);
         this.chSymoblKeyboard = new IMEKeyboard(this.ctx, R.xml.symbols_ch);
-        this.chineseKeyboard = new IMEKeyboard(this.ctx, R.xml.stroke5);
+        this.chineseKeyboard = new IMEKeyboard(this.ctx, R.xml.changjie);
         this.simleyKeyboard = new IMEKeyboard(this.ctx, R.xml.simley);
+        this.sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(ctx);
+        this.chineseKeyboard.setCapLock(this.sharedPrefs.getBoolean("setting_quick", false));
     }
     
     public void init() {
@@ -95,15 +102,31 @@ public class IMESwitch {
         switch (keyCode) {
             case IMEKeyboard.KEYCODE_CAPLOCK: {
                 this.currentKeyboard.setCapLock(! this.currentKeyboard.isCapLock());
+                if (this.isChinese()) {
+                	SharedPreferences.Editor edit = this.sharedPrefs.edit();
+                	edit.putBoolean("setting_quick", this.currentKeyboard.isCapLock());
+                	edit.commit();
+                }
                 result = true;
                 break;
             }
             case IMEKeyboard.KEYCODE_SHIFT: {
                 if (this.currentKeyboard.isCapLock()) {
                     this.currentKeyboard.setCapLock(false);
+                    if (this.isChinese()) {
+                    	SharedPreferences.Editor edit = this.sharedPrefs.edit();
+                    	edit.putBoolean("setting_quick", false);
+                    	edit.commit();
+                    }
                 } else {
                     this.currentKeyboard.setShifted(! this.currentKeyboard.isShifted());
+                    if (this.isChinese()) {
+                    	SharedPreferences.Editor edit = this.sharedPrefs.edit();
+                    	edit.putBoolean("setting_quick", this.currentKeyboard.isShifted());
+                    	edit.commit();
+                    }
                 }
+                
                 if (this.isNotCharKeyboard()) {
                     this.switchBetweenSymbolShift();
                 }

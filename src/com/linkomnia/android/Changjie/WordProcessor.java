@@ -76,8 +76,6 @@ public class WordProcessor {
     
     private Context ctx;
     
-    private ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>> chineseWordDict;
-    
     private ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>> chinesePhraseDict;
     
     private ChangjieDatabaseHelper dbh;
@@ -92,7 +90,6 @@ public class WordProcessor {
     @SuppressWarnings({ "unchecked", "rawtypes" })
     public WordProcessor(Context ctx) {
         this.ctx = ctx;
-        chineseWordDict = new ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>();
         chinesePhraseDict = new ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>();
         
         dbh = new ChangjieDatabaseHelper(ctx);
@@ -109,12 +106,12 @@ public class WordProcessor {
     
     @SuppressWarnings("unchecked")
     public void loading() {
-        this.chineseWordDict = (ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>)this.importFile(R.raw.stroke);
         this.chinesePhraseDict = (ConcurrentSkipListMap<String, CopyOnWriteArrayList<String>>)this.importFile(R.raw.tsin);
     }
     
     public ArrayList<String> getChineseWordDictArrayList(String key) {
     	String filter = this.defaultChangjieFilter;
+    	
         if (sharedPrefs.getBoolean("setting_filter_simplify", false)) {
         	filter += " OR kanji = 1 ";
         } 
@@ -122,9 +119,19 @@ public class WordProcessor {
         if (sharedPrefs.getBoolean("setting_version_5", false)) {
         	version = "5";
         }
+        
+        String searchKey = key + "*";
+        
+        if (this.sharedPrefs.getBoolean("setting_quick", false)) {
+        	if (key.length() < 2) {
+        		searchKey = key + "*";
+        	} else {
+        		searchKey = key.charAt(0) + "*" + key.charAt(1);
+        	}
+        }
     	
     	ArrayList<String> result = new ArrayList<String>();
-    	String[] args =  {version, key + "*"};
+    	String[] args =  {version, searchKey};
     	String order = "code, frequency DESC ";
     	String[] searchColumns = { "chchar", "code", "frequency" };
     	//SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY frequency DESC;
