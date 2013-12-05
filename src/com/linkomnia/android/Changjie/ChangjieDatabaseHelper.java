@@ -35,7 +35,7 @@ public class ChangjieDatabaseHelper extends SQLiteOpenHelper {
     
 	@Override
 	public void onCreate(SQLiteDatabase db) {
-		Log.d("WANLEUNG", "Create DB");
+		//Log.d("WANLEUNG", "Create DB");
 		// TODO Auto-generated method stub
     	try {
     		createDatabase();
@@ -51,7 +51,7 @@ public class ChangjieDatabaseHelper extends SQLiteOpenHelper {
 	}
 	
 	public void onOpen(SQLiteDatabase db) {
-		Log.d("WANLEUNG", "Load DB");
+		//Log.d("WANLEUNG", "Load DB");
     	try {
     		openDatabase();
     	}catch(SQLException sqle){

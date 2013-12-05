@@ -146,7 +146,7 @@ public class WordProcessor {
     	while (!cursor.isAfterLast()) {
     		String ch = cursor.getString(cursor.getColumnIndex("chchar")) ;
     		result.add(ch);
-    		Log.d("WANLEUNG", ch);
+    		//Log.d("WANLEUNG", ch);
     		cursor.moveToNext();
     	}
     	// Make sure to close the cursor
@@ -180,7 +180,7 @@ public class WordProcessor {
             in.close();
             inputStream.close();
         } catch (Exception e) {
-            Log.w("WANLEUNG", e.toString());
+            //Log.w("WANLEUNG", e.toString());
         }
         return obj;
     }
