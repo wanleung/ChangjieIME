@@ -21,12 +21,13 @@
 */
 -->
 <resources>
-    <dimen name="keychar_size">20sp</dimen>
+    <dimen name="keychar_size">18sp</dimen>
     <dimen name="key_height">50dip</dimen>
     <dimen name="key_height_bottom_row">50dip</dimen>
     <dimen name="key_verticalgap">0dip</dimen>
     <dimen name="strokekey_height">50dip</dimen>
-    <dimen name="candidate_font_height">20sp</dimen>
-    <dimen name="candidates_view_height">35dip</dimen>
+    <dimen name="candidate_font_height">10sp</dimen>
+    <dimen name="candidates_view_height">10dip</dimen>
+    <dimen name="candidates_char_size">10sp</dimen>
 </resources>
 

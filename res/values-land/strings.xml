@@ -21,13 +21,5 @@
 */
 -->
 <resources>
-    <dimen name="keychar_size">35sp</dimen>
-    <dimen name="key_height">70dip</dimen>
-    <dimen name="key_height_bottom_row">70dip</dimen>
-    <dimen name="key_verticalgap">5dip</dimen>
-    <dimen name="strokekey_height">145dip</dimen>
-    <dimen name="candidate_font_height">50sp</dimen>
-    <dimen name="candidates_view_height">300dip</dimen>
-    <dimen name="candidates_char_size">30sp</dimen>
+    <string name="result_max">10</string>
 </resources>
-

@@ -88,7 +88,7 @@ public class CandidateView extends LinearLayout {
         for (int i = 0; i < result_max; i++) {
             Button b = new Button(ctx);
             b.setTextColor(this.getResources().getColor(R.color.candidate_normal));
-            b.setTextSize(this.getResources().getDimension(R.dimen.keychar_size));
+            b.setTextSize(this.getResources().getDimension(R.dimen.candidates_char_size));
             b.setBackgroundDrawable(this.getResources().getDrawable(R.drawable.button));
             this.wordbuttonList.add(b);
             this.wordbar.addView(b, lp);
