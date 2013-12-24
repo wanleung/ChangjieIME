@@ -137,6 +137,10 @@ public class CandidateView extends LinearLayout {
         this.showWords();
     }
     
+    public ArrayList<String> getSuggestion() {
+    	return this.wordList;
+    }
+    
     public void updateInputBox(String input) {
     	/*
         for (int i = 0; i < 5; i++) {

@@ -191,7 +191,15 @@ public class ChangjieIME extends InputMethodService implements
     }
     
     private void handleKey(int keyCode, int[] keyCodes) {
-        if (this.imeSwitch.isChinese() && (keyCode >= 'a' && keyCode <= 'z' ) ) {
+    	if (this.imeSwitch.isChinese() && keyCode == ' ') {
+    		if (this.strokecount == 0) {
+    			this.handleCharacter(keyCode, keyCodes);
+    		} else if (this.strokecount == 1) {
+    			this.onChooseWord(WordProcessor.translateToChangjieCode(new String(this.charbuffer,0,this.strokecount)));
+    		} else {
+    			this.onChooseWord(this.candidateView.getSuggestion().get(0));
+    		}
+    	} else if (this.imeSwitch.isChinese() && (keyCode >= 'a' && keyCode <= 'z' ) ) {
             this.typingStroke(keyCode);
         } else {
             this.handleCharacter(keyCode, keyCodes);

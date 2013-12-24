@@ -111,6 +111,7 @@ public class WordProcessor {
     
     public ArrayList<String> getChineseWordDictArrayList(String key) {
     	String filter = this.defaultChangjieFilter;
+    	String order = "code, frequency DESC ";
     	
         if (sharedPrefs.getBoolean("setting_filter_simplify", false)) {
         	filter += " OR kanji = 1 ";
@@ -123,6 +124,7 @@ public class WordProcessor {
         String searchKey = key + "*";
         
         if (this.sharedPrefs.getBoolean("setting_quick", false)) {
+        	order = "frequency DESC ";
         	if (key.length() < 2) {
         		searchKey = key + "*";
         	} else {
@@ -132,7 +134,7 @@ public class WordProcessor {
     	
     	ArrayList<String> result = new ArrayList<String>();
     	String[] args =  {version, searchKey};
-    	String order = "code, frequency DESC ";
+    	//String order = "code, frequency DESC ";
     	String[] searchColumns = { "chchar", "code", "frequency" };
     	//SELECT chchar, code, frequency FROM chars INNER JOIN codes on chars.char_index=codes.char_index WHERE version=5 AND code GLOB "okr" ORDER BY frequency DESC;
     	//Cursor cursor = changjieDB.query("chars INNER JOIN codes on chars._id=codes._id",
