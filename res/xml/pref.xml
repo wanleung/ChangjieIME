@@ -35,6 +35,10 @@
             android:key="setting_quick"
             android:summary="@string/setting_quick_summary"
             android:title="@string/setting_quick_title" />
+        <CheckBoxPreference
+            android:key="setting_changjie_tradition"
+            android:summary="@string/setting_changjie_tradition_summary"
+            android:title="@string/setting_changjie_tradition_title" />
     </PreferenceCategory>
     
     <PreferenceCategory

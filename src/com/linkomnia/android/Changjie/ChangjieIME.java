@@ -199,9 +199,13 @@ public class ChangjieIME extends InputMethodService implements
     		} else if (this.strokecount == 1) {
     			this.onChooseWord(WordProcessor.translateToChangjieCode(new String(this.charbuffer,0,this.strokecount)));
     		} else {
-    			if (this.candidateView.getSuggestion().size() > 0) {
-    				this.onChooseWord(this.candidateView.getSuggestion().get(0));
-    			}
+    			if (this.sharedPrefs.getBoolean("setting_quick", false)) {
+    	        	this.candidateView.goRight();
+    	        } else {
+    	        	if (this.candidateView.getSuggestion().size() > 0) {
+    	        		this.onChooseWord(this.candidateView.getSuggestion().get(0));
+    	        	}
+    	        }
     		}
     	} else if (this.imeSwitch.isChinese() && (keyCode >= 'a' && keyCode <= 'z' ) ) {
             this.typingStroke(keyCode);

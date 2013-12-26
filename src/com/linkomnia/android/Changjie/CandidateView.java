@@ -210,6 +210,22 @@ public class CandidateView extends LinearLayout {
         this.wordlevel = Math.max(i,0);
         this.wordlevel = Math.min(this.show_div, this.wordlevel);
     } 
+
+    public void goLeft() {
+    	this.setWordlevel(this.getWordlevel()-1);
+        this.showWords();
+    }
+    
+    public void goRight() {
+    	if (this.wordlevel == show_max) {
+    		this.setWordlevel(0);
+    	} else {
+    		this.setWordlevel(this.getWordlevel()+1);
+    	}
+    	
+        this.showWords();
+    }
+    
 }
 
 class ButtonOnClickListener implements View.OnClickListener {

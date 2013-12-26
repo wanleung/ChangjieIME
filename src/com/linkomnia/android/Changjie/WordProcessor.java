@@ -130,6 +130,11 @@ public class WordProcessor {
         	} else {
         		searchKey = key.charAt(0) + "*" + key.charAt(1);
         	}
+        } else {
+        	if (this.sharedPrefs.getBoolean("setting_changjie_tradition", false)) {
+        		searchKey = key;
+        		order = " frequency DESC ";
+        	} 
         }
     	
     	ArrayList<String> result = new ArrayList<String>();

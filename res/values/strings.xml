@@ -27,7 +27,7 @@
     <string name="result_max">6</string>
     <string name="candidates_bottom_weight">3</string>
     <string name="pref_about">About</string>
-    <string name="ime_version">0.2.1</string>
+    <string name="ime_version">0.3</string>
     <string name="setting_version_header">Changjie Version</string>
     <string name="setting_version_title">Use Version 5</string>
     <string name="setting_version_summary">Default is using Version 3</string>
@@ -36,6 +36,8 @@
     <string name="setting_filter_simplify_summary">Enable Simplify Chinese</string>
     <string name="setting_quick_title">Enable Quick</string>
     <string name="setting_quick_summary">Enable Quick</string>
+    <string name="setting_changjie_tradition_title">Enable Traditional Mode</string>
+    <string name="setting_changjie_tradition_summary">Not to Show Auto Wildcard Search Results in typing Changjie</string>
     <string name="activity_setting_button">Setting Input Methods</string>
     <string name="activity_info">Welcome! If you want to use this input method, please click the \"Setting Input Methods\" Button to go to the setting page, and then to Enable this Input method.</string>
     <string name="action_settings">Settings</string>
