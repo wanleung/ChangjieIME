@@ -186,6 +186,10 @@ public class IMESwitch {
         if (this.isNotCharKeyboard()) {
             if (this.isNumberSymbol()) {
                 this.currentKeyboard = this.enSymoblShiftKeyboard;
+            } else if (this.currentKeyboard == this.enSymoblShiftKeyboard) {
+            	this.currentKeyboard = this.chSymoblKeyboard;
+            //} else if (this.currentKeyboard == this.chSymoblKeyboard) {
+            //	this.currentKeyboard = this.simleyKeyboard;
             } else {
                 this.currentKeyboard = this.enNumberSymbolKeyboard;
             }

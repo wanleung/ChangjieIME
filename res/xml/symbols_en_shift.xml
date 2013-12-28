@@ -55,7 +55,7 @@
     </Row>
     
     <Row>              
-        <Key android:codes="-2" android:keyLabel="123" 
+        <Key android:codes="-2" android:keyLabel="\u300e\u3002\u300b" 
                 android:keyWidth="15%p"
                 android:keyEdgeFlags="left"/>
         <Key android:keyLabel="."/>

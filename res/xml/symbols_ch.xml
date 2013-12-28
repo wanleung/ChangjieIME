@@ -46,8 +46,8 @@
         <Key android:keyLabel="\u300d"/>
         <Key android:keyLabel="\u300e"/>
         <Key android:keyLabel="\u300f"/>
-        <Key android:keyLabel="\u201c"/>
-        <Key android:keyLabel="\u201d"/>     
+        <Key android:keyLabel="\u3010"/>
+        <Key android:keyLabel="\u3011"/>     
         <Key android:keyLabel="\u3014"/>
         <Key android:keyLabel="\u3015"/>
         <Key android:keyLabel="\u300a"/>
@@ -55,16 +55,18 @@
     </Row>
     
     <Row>
-        <Key android:keyLabel="\uff1a" android:keyEdgeFlags="left"/>
+        <Key android:codes="-2" android:keyLabel="123" 
+             android:keyWidth="15%p"
+             android:keyEdgeFlags="left"/>
+        <Key android:keyLabel="\u3001"/>
+        <Key android:keyLabel="\uff1a"/>
         <Key android:keyLabel="\uff1b"/>
         <Key android:keyLabel="\u2026"/>
-        <Key android:keyLabel="\u3010"/>
-        <Key android:keyLabel="\u3011"/>
         <Key android:keyLabel="\u3008"/>
         <Key android:keyLabel="\u3009"/>
         <Key android:keyLabel="\u2014"/>
         <Key android:codes="-5" android:keyIcon="@drawable/key_delete"
-                android:keyWidth="20%p" android:isRepeatable="true"
+                android:keyWidth="15%p" android:isRepeatable="true"
                 android:keyEdgeFlags="right"/>
     </Row>
     
@@ -73,8 +75,10 @@
                 android:keyWidth="10%p" android:keyEdgeFlags="left"/>
         <Key android:codes="-300" android:keyIcon="@drawable/key_char" 
                 android:keyWidth="15%p"/>
+        <Key android:keyLabel="\uff0c"/>
         <Key android:codes="32" android:keyIcon="@drawable/key_space" 
-                android:keyWidth="40%p" android:isRepeatable="true"/>
+                android:keyWidth="20%p" android:isRepeatable="true"/>
+        <Key android:keyLabel="\u3002"/>
         <Key android:codes="-600" android:keyIcon="@drawable/key_lang"
         		android:keyWidth="15%p"/>
         <Key android:codes="10" android:keyIcon="@drawable/key_enter" 
