@@ -35,8 +35,12 @@
     <string name="setting_changjie_tradition_title">倉頡傳統模式</string>
     <string name="setting_changjie_tradition_summary">在輸入倉頡碼時不會自動使用萬用字元搜尋類近倉頡碼之漢字</string>
     
-    <string name="activity_setting_button">設定輸入法</string>
-    <string name="activity_info">歡迎使用本輸入法. 在使用此輸入法前, 請按"設定輸入法", 去啟用本輸入法程式.</string>
+    <string name="activity_setting_button">1. 在系統設定中啟用</string>
+    <string name="activity_select_button">2. 選擇為預設輸入法</string>
+    <string name="activity_info">如要使用倉頡鍵盤，請完成以下兩個步驟。</string>
+    <string name="activity_status_enabled">✓ 倉頡鍵盤已啟用</string>
+    <string name="activity_status_disabled">✗ 倉頡鍵盤尚未啟用</string>
     <string name="action_settings">設定</string>
+    <string name="action_privacy_policy">私隱政策</string>
     <string name="subtype_zh_hk">繁體中文（香港）</string>
 </resources>

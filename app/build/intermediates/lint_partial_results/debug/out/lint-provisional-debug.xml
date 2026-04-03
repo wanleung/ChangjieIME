@@ -2,111 +2,36 @@
 <incidents format="6" by="lint 8.1.4" type="conditional_incidents">
 
     <incident
-        id="RtlHardcoded"
-        severity="warning"
-        message="Consider replacing `android:layout_alignLeft` with `android:layout_alignStart=&quot;@+id/textView1&quot;` to better support right-to-left layouts">
-        <fix-replace
-            description="Replace with android:layout_alignStart=&quot;@+id/textView1&quot;"
-            oldString="layout_alignLeft"
-            replacement="layout_alignStart"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="21"
-            column="9"
-            startOffset="813"
-            endLine="21"
-            endColumn="33"
-            endOffset="837"/>
-        <map>
-            <entry
-                name="applies"
-                int="10"/>
-        </map>
-    </incident>
-
-    <incident
-        id="RtlHardcoded"
-        severity="warning"
-        message="Consider replacing `android:layout_alignRight` with `android:layout_alignEnd=&quot;@+id/textView1&quot;` to better support right-to-left layouts">
-        <fix-replace
-            description="Replace with android:layout_alignEnd=&quot;@+id/textView1&quot;"
-            oldString="layout_alignRight"
-            replacement="layout_alignEnd"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="22"
-            column="9"
-            startOffset="863"
-            endLine="22"
-            endColumn="34"
-            endOffset="888"/>
-        <map>
-            <entry
-                name="applies"
-                int="10"/>
-        </map>
-    </incident>
-
-    <incident
         id="UsingOnClickInXml"
         severity="warning"
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="25"
-            column="9"
-            startOffset="1000"
-            endLine="25"
-            endColumn="46"
-            endOffset="1037"/>
+            line="64"
+            column="13"
+            startOffset="2298"
+            endLine="64"
+            endColumn="50"
+            endOffset="2335"/>
         <map>
             <condition minLT="ffffffffffc00000"/>
         </map>
     </incident>
 
     <incident
-        id="RtlHardcoded"
+        id="UsingOnClickInXml"
         severity="warning"
-        message="Consider replacing `android:layout_alignLeft` with `android:layout_alignStart=&quot;@+id/button1&quot;` to better support right-to-left layouts">
-        <fix-replace
-            description="Replace with android:layout_alignStart=&quot;@+id/button1&quot;"
-            oldString="layout_alignLeft"
-            replacement="layout_alignStart"/>
+        message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="32"
-            column="9"
-            startOffset="1240"
-            endLine="32"
-            endColumn="33"
-            endOffset="1264"/>
+            line="73"
+            column="13"
+            startOffset="2654"
+            endLine="73"
+            endColumn="48"
+            endOffset="2689"/>
         <map>
-            <entry
-                name="applies"
-                int="10"/>
-        </map>
-    </incident>
-
-    <incident
-        id="RtlHardcoded"
-        severity="warning"
-        message="Consider replacing `android:layout_alignRight` with `android:layout_alignEnd=&quot;@+id/button1&quot;` to better support right-to-left layouts">
-        <fix-replace
-            description="Replace with android:layout_alignEnd=&quot;@+id/button1&quot;"
-            oldString="layout_alignRight"
-            replacement="layout_alignEnd"/>
-        <location
-            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="33"
-            column="9"
-            startOffset="1288"
-            endLine="33"
-            endColumn="34"
-            endOffset="1313"/>
-        <map>
-            <entry
-                name="applies"
-                int="10"/>
+            <condition minLT="ffffffffffc00000"/>
         </map>
     </incident>
 
@@ -116,12 +41,46 @@
         message="Use databinding or explicit wiring of click listener in code">
         <location
             file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
-            line="35"
-            column="9"
-            startOffset="1381"
-            endLine="35"
-            endColumn="39"
-            endOffset="1411"/>
+            line="90"
+            column="13"
+            startOffset="3271"
+            endLine="90"
+            endColumn="43"
+            endOffset="3301"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="99"
+            column="13"
+            startOffset="3615"
+            endLine="99"
+            endColumn="48"
+            endOffset="3650"/>
+        <map>
+            <condition minLT="ffffffffffc00000"/>
+        </map>
+    </incident>
+
+    <incident
+        id="UsingOnClickInXml"
+        severity="warning"
+        message="Use databinding or explicit wiring of click listener in code">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="108"
+            column="13"
+            startOffset="3959"
+            endLine="108"
+            endColumn="43"
+            endOffset="3989"/>
         <map>
             <condition minLT="ffffffffffc00000"/>
         </map>

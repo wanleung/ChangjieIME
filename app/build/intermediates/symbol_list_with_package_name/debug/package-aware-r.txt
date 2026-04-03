@@ -3179,9 +3179,12 @@ id beginning
 id blocking
 id bottom
 id bounce
-id button1
-id button2
 id buttonPanel
+id button_about
+id button_enable
+id button_privacy
+id button_select
+id button_settings
 id cancel_button
 id candidate_view
 id center
@@ -3488,6 +3491,7 @@ id startToEnd
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_text
 id stop
 id stretch
 id submenuarrow
@@ -3514,7 +3518,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView1
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3806,9 +3809,13 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string action_privacy_policy
 string action_settings
 string activity_info
+string activity_select_button
 string activity_setting_button
+string activity_status_disabled
+string activity_status_enabled
 string androidx_startup
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior

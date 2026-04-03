@@ -109,12 +109,12 @@
         priority="1"
         summary="Using `android:onClick` on older version of the platform is broken"
         explanation="Old versions of the platform do not properly support resolving `android:onClick`"
-        errorLine1="        android:onClick=&quot;openLanguageSetting&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            android:onClick=&quot;openLanguageSetting&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
-            line="25"
-            column="9"/>
+            line="64"
+            column="13"/>
     </issue>
 
     <issue
@@ -125,12 +125,60 @@
         priority="1"
         summary="Using `android:onClick` on older version of the platform is broken"
         explanation="Old versions of the platform do not properly support resolving `android:onClick`"
-        errorLine1="        android:onClick=&quot;showAboutBox&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        errorLine1="            android:onClick=&quot;selectInputMethod&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
-            line="35"
-            column="9"/>
+            line="73"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UsingOnClickInXml"
+        severity="Warning"
+        message="Use databinding or explicit wiring of click listener in code"
+        category="Correctness"
+        priority="1"
+        summary="Using `android:onClick` on older version of the platform is broken"
+        explanation="Old versions of the platform do not properly support resolving `android:onClick`"
+        errorLine1="            android:onClick=&quot;openSettings&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
+            line="90"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UsingOnClickInXml"
+        severity="Warning"
+        message="Use databinding or explicit wiring of click listener in code"
+        category="Correctness"
+        priority="1"
+        summary="Using `android:onClick` on older version of the platform is broken"
+        explanation="Old versions of the platform do not properly support resolving `android:onClick`"
+        errorLine1="            android:onClick=&quot;showPrivacyPolicy&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
+            line="99"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UsingOnClickInXml"
+        severity="Warning"
+        message="Use databinding or explicit wiring of click listener in code"
+        category="Correctness"
+        priority="1"
+        summary="Using `android:onClick` on older version of the platform is broken"
+        explanation="Old versions of the platform do not properly support resolving `android:onClick`"
+        errorLine1="            android:onClick=&quot;showAboutBox&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
+            line="108"
+            column="13"/>
     </issue>
 
     <issue
@@ -276,6 +324,38 @@
         <location
             file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/values/dimens.xml"
             line="7"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.activity_horizontal_margin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;dimen name=&quot;activity_horizontal_margin&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/values/dimens.xml"
+            line="12"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        severity="Warning"
+        message="The resource `R.dimen.activity_vertical_margin` appears to be unused"
+        category="Performance"
+        priority="3"
+        summary="Unused resources"
+        explanation="Unused resources make applications larger and slow down builds.&#xA;&#xA;&#xA;The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.&#xA;&#xA;You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests =true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests =true.&#xA;,"
+        errorLine1="    &lt;dimen name=&quot;activity_vertical_margin&quot;>16dp&lt;/dimen>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/values/dimens.xml"
+            line="13"
             column="12"/>
     </issue>
 
@@ -431,7 +511,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
         <location
             file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/values/strings.xml"
-            line="22"
+            line="26"
             column="13"/>
     </issue>
 
@@ -659,70 +739,6 @@
             file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/main.xml"
             line="43"
             column="17"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider replacing `android:layout_alignLeft` with `android:layout_alignStart=&quot;@+id/textView1&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="        android:layout_alignLeft=&quot;@+id/textView1&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
-            line="21"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider replacing `android:layout_alignRight` with `android:layout_alignEnd=&quot;@+id/textView1&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="        android:layout_alignRight=&quot;@+id/textView1&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
-            line="22"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider replacing `android:layout_alignLeft` with `android:layout_alignStart=&quot;@+id/button1&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="        android:layout_alignLeft=&quot;@+id/button1&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
-            line="32"
-            column="9"/>
-    </issue>
-
-    <issue
-        id="RtlHardcoded"
-        severity="Warning"
-        message="Consider replacing `android:layout_alignRight` with `android:layout_alignEnd=&quot;@+id/button1&quot;` to better support right-to-left layouts"
-        category="Internationalization:Bidirectional Text"
-        priority="5"
-        summary="Using left/right instead of start/end attributes"
-        explanation="Using `Gravity#LEFT` and `Gravity#RIGHT` can lead to problems when a layout is rendered in locales where text flows from right to left. Use `Gravity#START` and `Gravity#END` instead. Similarly, in XML `gravity` and `layout_gravity` attributes, use `start` rather than `left`.&#xA;&#xA;For XML attributes such as paddingLeft and `layout_marginLeft`, use `paddingStart` and `layout_marginStart`. **NOTE**: If your `minSdkVersion` is less than 17, you should add **both** the older left/right attributes **as well as** the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.&#xA;&#xA;(Note: For `Gravity#LEFT` and `Gravity#START`, you can use these constants even when targeting older platforms, because the `start` bitmask is a superset of the `left` bitmask. Therefore, you can use `gravity=&quot;start&quot;` rather than `gravity=&quot;left|start&quot;`.)"
-        errorLine1="        android:layout_alignRight=&quot;@+id/button1&quot;"
-        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/home/wanleung/Projects/ChangjieIME/app/src/main/res/layout/activity_main.xml"
-            line="33"
-            column="9"/>
     </issue>
 
 </issues>

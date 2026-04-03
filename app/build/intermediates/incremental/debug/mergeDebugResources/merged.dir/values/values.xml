@@ -1917,9 +1917,13 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="action_privacy_policy">Privacy Policy</string>
     <string name="action_settings">Settings</string>
-    <string name="activity_info">Welcome! If you want to use this input method, please click the \"Setting Input Methods\" Button to go to the setting page, and then to Enable this Input method.</string>
-    <string name="activity_setting_button">Setting Input Methods</string>
+    <string name="activity_info">To use Changjie Keyboard, complete the two steps below.</string>
+    <string name="activity_select_button">2. Select as Default Input Method</string>
+    <string name="activity_setting_button">1. Enable in System Settings</string>
+    <string name="activity_status_disabled">✗ Changjie Keyboard is not enabled yet</string>
+    <string name="activity_status_enabled">✓ Changjie Keyboard is enabled</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>

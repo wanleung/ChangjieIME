@@ -16,8 +16,12 @@
     <string name="setting_quick_summary">Enable Quick</string>
     <string name="setting_changjie_tradition_title">Enable Traditional Mode</string>
     <string name="setting_changjie_tradition_summary">Not to Show Auto Wildcard Search Results in typing Changjie</string>
-    <string name="activity_setting_button">Setting Input Methods</string>
-    <string name="activity_info">Welcome! If you want to use this input method, please click the \"Setting Input Methods\" Button to go to the setting page, and then to Enable this Input method.</string>
+    <string name="activity_setting_button">1. Enable in System Settings</string>
+    <string name="activity_select_button">2. Select as Default Input Method</string>
+    <string name="activity_info">To use Changjie Keyboard, complete the two steps below.</string>
+    <string name="activity_status_enabled">✓ Changjie Keyboard is enabled</string>
+    <string name="activity_status_disabled">✗ Changjie Keyboard is not enabled yet</string>
     <string name="action_settings">Settings</string>
+    <string name="action_privacy_policy">Privacy Policy</string>
     <string name="subtype_zh_hk">Traditional Chinese (Hong Kong)</string>
 </resources>

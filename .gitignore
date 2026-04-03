@@ -1,0 +1,49 @@
+# =============================================================================
+# Android / Gradle
+# =============================================================================
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Generated APKs / AABs
+*.apk
+*.aab
+
+# Keystore / signing files – never commit secrets
+*.jks
+*.keystore
+keystore.properties
+
+# Proguard mapping output
+mapping.txt
+
+# Ant build output (legacy)
+bin/
+gen/
+ant.properties
+
+# =============================================================================
+# Android Studio / IntelliJ
+# =============================================================================
+*.iws
+out/
+.navigation/
+misc.xml
+modules.xml
+workspace.xml
+navEditor.xml
+asNavGraph.xml
+
+# =============================================================================
+# OS
+# =============================================================================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/

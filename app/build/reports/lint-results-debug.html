@@ -177,9 +177,9 @@ document.getElementById(id).style.display = 'none';
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <span class="mdl-layout-title">Lint Report: 49 warnings</span>
+      <span class="mdl-layout-title">Lint Report: 50 warnings</span>
       <div class="mdl-layout-spacer"></div>
-      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Fri Apr 03 12:46:55 BST 2026 by AGP (8.1.4)</nav>
+      <nav class="mdl-navigation mdl-layout--large-screen-only">Check performed at Fri Apr 03 14:10:28 BST 2026 by AGP (8.1.4)</nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -190,16 +190,15 @@ document.getElementById(id).style.display = 'none';
       <a class="mdl-navigation__link" href="#InflateParams"><i class="material-icons warning-icon">warning</i>Layout Inflation without a Parent (1)</a>
       <a class="mdl-navigation__link" href="#RedundantLabel"><i class="material-icons warning-icon">warning</i>Redundant label on activity (2)</a>
       <a class="mdl-navigation__link" href="#GradleDependency"><i class="material-icons warning-icon">warning</i>Obsolete Gradle Dependency (2)</a>
-      <a class="mdl-navigation__link" href="#UsingOnClickInXml"><i class="material-icons warning-icon">warning</i>Using <code>android:onClick</code> on older version of the platform is broken (2)</a>
+      <a class="mdl-navigation__link" href="#UsingOnClickInXml"><i class="material-icons warning-icon">warning</i>Using <code>android:onClick</code> on older version of the platform is broken (5)</a>
       <a class="mdl-navigation__link" href="#MergeRootFrame"><i class="material-icons warning-icon">warning</i>FrameLayout can be replaced with <code>&lt;merge></code> tag (1)</a>
-      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (21)</a>
+      <a class="mdl-navigation__link" href="#UnusedResources"><i class="material-icons warning-icon">warning</i>Unused resources (23)</a>
       <a class="mdl-navigation__link" href="#IconLauncherShape"><i class="material-icons warning-icon">warning</i>The launcher icon shape should use a distinct silhouette (3)</a>
       <a class="mdl-navigation__link" href="#IconDuplicatesConfig"><i class="material-icons warning-icon">warning</i>Identical bitmaps across various configurations (5)</a>
       <a class="mdl-navigation__link" href="#IconDensities"><i class="material-icons warning-icon">warning</i>Icon densities validation (1)</a>
       <a class="mdl-navigation__link" href="#IconMissingDensityFolder"><i class="material-icons warning-icon">warning</i>Missing density folder (1)</a>
       <a class="mdl-navigation__link" href="#ClickableViewAccessibility"><i class="material-icons warning-icon">warning</i>Accessibility in Custom Views (1)</a>
       <a class="mdl-navigation__link" href="#KeyboardInaccessibleWidget"><i class="material-icons warning-icon">warning</i>Keyboard inaccessible widget (4)</a>
-      <a class="mdl-navigation__link" href="#RtlHardcoded"><i class="material-icons warning-icon">warning</i>Using left/right instead of start/end attributes (4)</a>
     </nav>
   </div>
   <main class="mdl-layout__content">
@@ -227,7 +226,7 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#GradleDependency">GradleDependency</a>: Obsolete Gradle Dependency</td></tr>
 <tr>
-<td class="countColumn">2</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">5</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UsingOnClickInXml">UsingOnClickInXml</a>: Using <code>android:onClick</code> on older version of the platform is broken</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Performance">Performance</a>
 </td></tr>
@@ -235,7 +234,7 @@ document.getElementById(id).style.display = 'none';
 <td class="countColumn">1</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#MergeRootFrame">MergeRootFrame</a>: FrameLayout can be replaced with <code>&lt;merge></code> tag</td></tr>
 <tr>
-<td class="countColumn">21</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
+<td class="countColumn">23</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#UnusedResources">UnusedResources</a>: Unused resources</td></tr>
 <tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Usability:Icons">Usability:Icons</a>
 </td></tr>
@@ -259,11 +258,6 @@ document.getElementById(id).style.display = 'none';
 <tr>
 <td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
 <a href="#KeyboardInaccessibleWidget">KeyboardInaccessibleWidget</a>: Keyboard inaccessible widget</td></tr>
-<tr><td class="countColumn"></td><td class="categoryColumn"><a href="#Internationalization:Bidirectional Text">Internationalization:Bidirectional Text</a>
-</td></tr>
-<tr>
-<td class="countColumn">4</td><td class="issueColumn"><i class="material-icons warning-icon">warning</i>
-<a href="#RtlHardcoded">RtlHardcoded</a>: Using left/right instead of start/end attributes</td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#ExtraIssues">Included Additional Checks (23)</a>
 </td></tr>
 <tr><td></td><td class="categoryColumn"><a href="#MissingIssues">Disabled Checks (40)</a>
@@ -491,23 +485,50 @@ Dismiss</button>            </div>
               <div class="mdl-card__supporting-text">
 <div class="issue">
 <div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:25</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
-<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignRight</span>=<span class="value">"@+id/textView1"</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/textView1"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"38dp"</span>
-<span class="caretline"><span class="lineno"> 25 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"openLanguageSetting"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 26 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/activity_setting_button"</span> />
-<span class="lineno"> 27 </span>
-<span class="lineno"> 28 </span>    <span class="tag">&lt;Button</span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:64</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
+<span class="lineno">  61 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button_enable"</span>
+<span class="lineno">  62 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  63 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  64 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"openLanguageSetting"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  65 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/activity_setting_button"</span>
+<span class="lineno">  66 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"8dp"</span> />
+</pre>
 
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:35</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
-<span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignLeft</span>=<span class="value">"@+id/button1"</span>
-<span class="lineno"> 33 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignRight</span>=<span class="value">"@+id/button1"</span>
-<span class="lineno"> 34 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/button1"</span>
-<span class="caretline"><span class="lineno"> 35 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"showAboutBox"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 36 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/pref_about"</span> />
-<span class="lineno"> 37 </span>
-<span class="lineno"> 38 </span><span class="tag">&lt;/RelativeLayout></span></pre>
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:73</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
+<span class="lineno">  70 </span><span class="attribute">            </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button_select"</span>
+<span class="lineno">  71 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  72 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  73 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"selectInputMethod"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  74 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/activity_select_button"</span>
+<span class="lineno">  75 </span>            <span class="prefix">android:</span><span class="attribute">layout_marginBottom</span>=<span class="value">"24dp"</span> />
+</pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:90</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
+<span class="lineno">  87 </span>            <span class="attribute">style</span>=<span class="value">"?android:attr/borderlessButtonStyle"</span>
+<span class="lineno">  88 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  89 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  90 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"openSettings"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno">  91 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/action_settings"</span> />
+<span class="lineno">  92 </span>
+<span class="lineno">  93 </span>        <span class="comment">&lt;!-- Privacy Policy --></span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:99</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
+<span class="lineno">  96 </span>            <span class="attribute">style</span>=<span class="value">"?android:attr/borderlessButtonStyle"</span>
+<span class="lineno">  97 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno">  98 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno">  99 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"showPrivacyPolicy"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 100 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/action_privacy_policy"</span> />
+<span class="lineno"> 101 </span>
+<span class="lineno"> 102 </span>        <span class="comment">&lt;!-- About --></span></pre>
+
+<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:108</span>: <span class="message">Use databinding or explicit wiring of click listener in code</span><br /><pre class="errorlines">
+<span class="lineno"> 105 </span>            <span class="attribute">style</span>=<span class="value">"?android:attr/borderlessButtonStyle"</span>
+<span class="lineno"> 106 </span>            <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"match_parent"</span>
+<span class="lineno"> 107 </span>            <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
+<span class="caretline"><span class="lineno"> 108 </span>            <span class="warning"><span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"showAboutBox"</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 109 </span>            <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/pref_about"</span> />
+<span class="lineno"> 110 </span>
+<span class="lineno"> 111 </span>    <span class="tag">&lt;/LinearLayout></span></pre>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationUsingOnClickInXml" style="display: none;">
@@ -637,7 +658,7 @@ Dismiss</button>            </div>
 <span class="lineno">  6 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"key_verticalgap"</span>>0dip<span class="tag">&lt;/dimen></span>
 <span class="lineno">  7 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"strokekey_height"</span>>50dip<span class="tag">&lt;/dimen></span></pre>
 
-<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 16 More Occurrences...</button>
+<button class="mdl-button mdl-js-button mdl-button--primary" id="UnusedResourcesDivLink" onclick="reveal('UnusedResourcesDiv');" />+ 18 More Occurrences...</button>
 <div id="UnusedResourcesDiv" style="display: none">
 <span class="location"><a href="../../src/main/res/values/dimens.xml">../../src/main/res/values/dimens.xml</a>:5</span>: <span class="message">The resource <code>R.dimen.key_height_bottom_row</code> appears to be unused</span><br /><pre class="errorlines">
 <span class="lineno">  2 </span><span class="tag">&lt;resources></span>
@@ -666,6 +687,23 @@ Dismiss</button>            </div>
 <span class="lineno">  9 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"candidates_view_height"</span>>48dp<span class="tag">&lt;/dimen></span>
 <span class="lineno"> 10 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"candidates_char_size"</span>>18sp<span class="tag">&lt;/dimen></span></pre>
 
+<span class="location"><a href="../../src/main/res/values/dimens.xml">../../src/main/res/values/dimens.xml</a>:12</span>: <span class="message">The resource <code>R.dimen.activity_horizontal_margin</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno">  9 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"candidates_view_height"</span>>48dp<span class="tag">&lt;/dimen></span>
+<span class="lineno"> 10 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"candidates_char_size"</span>>18sp<span class="tag">&lt;/dimen></span>
+<span class="lineno"> 11 </span>
+<span class="caretline"><span class="lineno"> 12 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"activity_horizontal_margin"</span></span>>16dp<span class="tag">&lt;/dimen></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 13 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"activity_vertical_margin"</span>>16dp<span class="tag">&lt;/dimen></span>
+<span class="lineno"> 14 </span><span class="tag">&lt;/resources></span>
+</pre>
+
+<span class="location"><a href="../../src/main/res/values/dimens.xml">../../src/main/res/values/dimens.xml</a>:13</span>: <span class="message">The resource <code>R.dimen.activity_vertical_margin</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 10 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"candidates_char_size"</span>>18sp<span class="tag">&lt;/dimen></span>
+<span class="lineno"> 11 </span>
+<span class="lineno"> 12 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> name</span>=<span class="value">"activity_horizontal_margin"</span>>16dp<span class="tag">&lt;/dimen></span>
+<span class="caretline"><span class="lineno"> 13 </span>    <span class="tag">&lt;dimen</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"activity_vertical_margin"</span></span>>16dp<span class="tag">&lt;/dimen></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 14 </span><span class="tag">&lt;/resources></span>
+</pre>
+
 <span class="location"><a href="../../src/main/res/drawable-mdpi/key_char.png">../../src/main/res/drawable-mdpi/key_char.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable-mdpi/key_char.png" /><span class="message">The resource <code>R.drawable.key_char</code> appears to be unused</span><br clear="right"/>
 <span class="location"><a href="../../src/main/res/drawable-mdpi/key_chinese.png">../../src/main/res/drawable-mdpi/key_chinese.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable-mdpi/key_chinese.png" /><span class="message">The resource <code>R.drawable.key_chinese</code> appears to be unused</span><br clear="right"/>
 <span class="location"><a href="../../src/main/res/drawable-mdpi/key_delete.png">../../src/main/res/drawable-mdpi/key_delete.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable-mdpi/key_delete.png" /><span class="message">The resource <code>R.drawable.key_delete</code> appears to be unused</span><br clear="right"/>
@@ -693,12 +731,12 @@ Dismiss</button>            </div>
 <span class="lineno">  8 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"ime_version"</span> <span class="attribute">translatable</span>=<span class="value">"false"</span>>2.0<span class="tag">&lt;/string></span>
 <span class="lineno">  9 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"setting_version_header"</span>>Changjie Version<span class="tag">&lt;/string></span></pre>
 
-<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:22</span>: <span class="message">The resource <code>R.string.subtype_zh_hk</code> appears to be unused</span><br /><pre class="errorlines">
-<span class="lineno"> 19 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"activity_setting_button"</span>>Setting Input Methods<span class="tag">&lt;/string></span>
-<span class="lineno"> 20 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"activity_info"</span>>Welcome! If you want to use this input method, please click the \"Setting Input Methods\" Button to go to the setting page, and then to Enable this Input method.<span class="tag">&lt;/string></span>
-<span class="lineno"> 21 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"action_settings"</span>>Settings<span class="tag">&lt;/string></span>
-<span class="caretline"><span class="lineno"> 22 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"subtype_zh_hk"</span></span>>Traditional Chinese (Hong Kong)<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 23 </span><span class="tag">&lt;/resources></span>
+<span class="location"><a href="../../src/main/res/values/strings.xml">../../src/main/res/values/strings.xml</a>:26</span>: <span class="message">The resource <code>R.string.subtype_zh_hk</code> appears to be unused</span><br /><pre class="errorlines">
+<span class="lineno"> 23 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"activity_status_disabled"</span>>✗ Changjie Keyboard is not enabled yet<span class="tag">&lt;/string></span>
+<span class="lineno"> 24 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"action_settings"</span>>Settings<span class="tag">&lt;/string></span>
+<span class="lineno"> 25 </span>    <span class="tag">&lt;string</span><span class="attribute"> name</span>=<span class="value">"action_privacy_policy"</span>>Privacy Policy<span class="tag">&lt;/string></span>
+<span class="caretline"><span class="lineno"> 26 </span>    <span class="tag">&lt;string</span><span class="attribute"> </span><span class="warning"><span class="attribute">name</span>=<span class="value">"subtype_zh_hk"</span></span>>Traditional Chinese (Hong Kong)<span class="tag">&lt;/string></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+<span class="lineno"> 27 </span><span class="tag">&lt;/resources></span>
 </pre>
 
 <span class="location"><a href="../../src/main/res/drawable-mdpi/stroke3_show.png">../../src/main/res/drawable-mdpi/stroke3_show.png</a></span>: <img class="embedimage" align="right" src="../../src/main/res/drawable-mdpi/stroke3_show.png" /><span class="message">The resource <code>R.drawable.stroke3_show</code> appears to be unused</span><br clear="right"/>
@@ -1083,88 +1121,6 @@ To suppress this error, use the issue id "KeyboardInaccessibleWidget" as explain
               <div class="mdl-card__actions mdl-card--border">
 <button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationKeyboardInaccessibleWidgetLink" onclick="reveal('explanationKeyboardInaccessibleWidget');">
 Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="KeyboardInaccessibleWidgetCardLink" onclick="hideid('KeyboardInaccessibleWidgetCard');">
-Dismiss</button>            </div>
-            </div>
-          </section>
-<a name="Internationalization:Bidirectional Text"></a>
-<a name="RtlHardcoded"></a>
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp" id="RtlHardcodedCard" style="display: block;">
-            <div class="mdl-card mdl-cell mdl-cell--12-col">
-  <div class="mdl-card__title">
-    <h2 class="mdl-card__title-text">Using left/right instead of start/end attributes</h2>
-  </div>
-              <div class="mdl-card__supporting-text">
-<div class="issue">
-<div class="warningslist">
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:21</span>: <span class="message">Consider replacing <code>android:layout_alignLeft</code> with <code>android:layout_alignStart="@+id/textView1"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 18 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button1"</span>
-<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 21 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignLeft</span></span>=<span class="value">"@+id/textView1"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 22 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignRight</span>=<span class="value">"@+id/textView1"</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/textView1"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"38dp"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:22</span>: <span class="message">Consider replacing <code>android:layout_alignRight</code> with <code>android:layout_alignEnd="@+id/textView1"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 19 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 20 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 21 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignLeft</span>=<span class="value">"@+id/textView1"</span>
-<span class="caretline"><span class="lineno"> 22 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignRight</span></span>=<span class="value">"@+id/textView1"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 23 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/textView1"</span>
-<span class="lineno"> 24 </span>        <span class="prefix">android:</span><span class="attribute">layout_marginTop</span>=<span class="value">"38dp"</span>
-<span class="lineno"> 25 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"openLanguageSetting"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:32</span>: <span class="message">Consider replacing <code>android:layout_alignLeft</code> with <code>android:layout_alignStart="@+id/button1"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 29 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">id</span>=<span class="value">"@+id/button2"</span>
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="caretline"><span class="lineno"> 32 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignLeft</span></span>=<span class="value">"@+id/button1"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 33 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignRight</span>=<span class="value">"@+id/button1"</span>
-<span class="lineno"> 34 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/button1"</span>
-<span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"showAboutBox"</span></pre>
-
-<span class="location"><a href="../../src/main/res/layout/activity_main.xml">../../src/main/res/layout/activity_main.xml</a>:33</span>: <span class="message">Consider replacing <code>android:layout_alignRight</code> with <code>android:layout_alignEnd="@+id/button1"</code> to better support right-to-left layouts</span><br /><pre class="errorlines">
-<span class="lineno"> 30 </span>        <span class="prefix">android:</span><span class="attribute">layout_width</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 31 </span>        <span class="prefix">android:</span><span class="attribute">layout_height</span>=<span class="value">"wrap_content"</span>
-<span class="lineno"> 32 </span>        <span class="prefix">android:</span><span class="attribute">layout_alignLeft</span>=<span class="value">"@+id/button1"</span>
-<span class="caretline"><span class="lineno"> 33 </span>        <span class="warning"><span class="prefix">android:</span><span class="attribute">layout_alignRight</span></span>=<span class="value">"@+id/button1"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-<span class="lineno"> 34 </span>        <span class="prefix">android:</span><span class="attribute">layout_below</span>=<span class="value">"@+id/button1"</span>
-<span class="lineno"> 35 </span>        <span class="prefix">android:</span><span class="attribute">onClick</span>=<span class="value">"showAboutBox"</span>
-<span class="lineno"> 36 </span>        <span class="prefix">android:</span><span class="attribute">text</span>=<span class="value">"@string/pref_about"</span> />
-</pre>
-
-</div>
-<div class="metadata"><div class="explanation" id="explanationRtlHardcoded" style="display: none;">
-Using <code>Gravity#LEFT</code> and <code>Gravity#RIGHT</code> can lead to problems when a layout is rendered in locales where text flows from right to left. Use <code>Gravity#START</code> and <code>Gravity#END</code> instead. Similarly, in XML <code>gravity</code> and <code>layout_gravity</code> attributes, use <code>start</code> rather than <code>left</code>.<br/>
-<br/>
-For XML attributes such as paddingLeft and <code>layout_marginLeft</code>, use <code>paddingStart</code> and <code>layout_marginStart</code>. <b>NOTE</b>: If your <code>minSdkVersion</code> is less than 17, you should add <b>both</b> the older left/right attributes <b>as well as</b> the new start/end attributes. On older platforms, where RTL is not supported and the start/end attributes are unknown and therefore ignored, you need the older left/right attributes. There is a separate lint check which catches that type of error.<br/>
-<br/>
-(Note: For <code>Gravity#LEFT</code> and <code>Gravity#START</code>, you can use these constants even when targeting older platforms, because the <code>start</code> bitmask is a superset of the <code>left</code> bitmask. Therefore, you can use <code>gravity="start"</code> rather than <code>gravity="left|start"</code>.)<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
-To suppress this error, use the issue id "RtlHardcoded" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
-<br/></div>
-</div>
-</div>
-<div class="chips">
-<span class="mdl-chip">
-    <span class="mdl-chip__text">RtlHardcoded</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Bidirectional Text</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Internationalization</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Warning</span>
-</span>
-<span class="mdl-chip">
-    <span class="mdl-chip__text">Priority 5/10</span>
-</span>
-</div>
-              </div>
-              <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="explanationRtlHardcodedLink" onclick="reveal('explanationRtlHardcoded');">
-Explain</button><button class="mdl-button mdl-js-button mdl-js-ripple-effect" id="RtlHardcodedCardLink" onclick="hideid('RtlHardcodedCard');">
 Dismiss</button>            </div>
             </div>
           </section>

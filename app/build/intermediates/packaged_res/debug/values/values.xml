@@ -14,9 +14,13 @@
     <dimen name="key_verticalgap">0dip</dimen>
     <dimen name="keychar_size">18sp</dimen>
     <dimen name="strokekey_height">50dip</dimen>
+    <string name="action_privacy_policy">Privacy Policy</string>
     <string name="action_settings">Settings</string>
-    <string name="activity_info">Welcome! If you want to use this input method, please click the \"Setting Input Methods\" Button to go to the setting page, and then to Enable this Input method.</string>
-    <string name="activity_setting_button">Setting Input Methods</string>
+    <string name="activity_info">To use Changjie Keyboard, complete the two steps below.</string>
+    <string name="activity_select_button">2. Select as Default Input Method</string>
+    <string name="activity_setting_button">1. Enable in System Settings</string>
+    <string name="activity_status_disabled">✗ Changjie Keyboard is not enabled yet</string>
+    <string name="activity_status_enabled">✓ Changjie Keyboard is enabled</string>
     <string name="candidates_bottom_weight" translatable="false">3</string>
     <string name="database_version" translatable="false">1</string>
     <string name="ime_name">Changjie Input Method</string>
