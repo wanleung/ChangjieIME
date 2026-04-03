@@ -2,22 +2,43 @@ plugins {
     id 'com.android.application'
 }
 
+// Load signing credentials from keystore.properties (never committed to git)
+def keystorePropsFile = rootProject.file("keystore.properties")
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) {
+    keystoreProps.load(new FileInputStream(keystorePropsFile))
+}
+
 android {
-    namespace 'com.linkomnia.android.Changjie'
-    compileSdk 34
+    namespace 'com.wanleung.android.Changjie'
+    compileSdk 35
 
     defaultConfig {
-        applicationId "com.linkomnia.android.Changjie"
+        applicationId "com.wanleung.android.Changjie"
         minSdk 21
-        targetSdk 34
-        versionCode 8
-        versionName "2.0"
+        targetSdk 35
+        versionCode 10
+        versionName "3.0"
+    }
+
+    signingConfigs {
+        release {
+            if (keystorePropsFile.exists() && keystoreProps['storeFile']) {
+                storeFile     file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias      keystoreProps['keyAlias']
+                keyPassword   keystoreProps['keyPassword']
+            }
+        }
     }
 
     buildTypes {
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (keystorePropsFile.exists() && keystoreProps['storeFile']) {
+                signingConfig signingConfigs.release
+            }
         }
         debug {
             minifyEnabled false

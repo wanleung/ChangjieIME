@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.linkomnia.android.Changjie.CandidateView
+<com.wanleung.android.Changjie.CandidateView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/horizontal"
     android:orientation="vertical"
@@ -42,4 +42,4 @@
             android:background="@drawable/button" />
     </LinearLayout>
 
-</com.linkomnia.android.Changjie.CandidateView>
+</com.wanleung.android.Changjie.CandidateView>

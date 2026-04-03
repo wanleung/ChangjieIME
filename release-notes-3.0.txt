@@ -1,0 +1,3 @@
+Version 3.0 — Complete rebuild for modern Android. Fixed candidate bar display, updated keyboard engine for Android 14 compatibility. No data collection — all processing is local and on-device.
+
+版本 3.0 — 全面重建以支援現代 Android。修復候選字欄顯示問題，更新鍵盤引擎以相容 Android 14。不收集任何資料，所有處理均在本機完成。

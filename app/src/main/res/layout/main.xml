@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <com.linkomnia.android.Changjie.CandidateView
+    <com.wanleung.android.Changjie.CandidateView
         android:id="@+id/candidate_view"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -46,9 +46,9 @@
                 android:background="@drawable/button" />
         </LinearLayout>
 
-    </com.linkomnia.android.Changjie.CandidateView>
+    </com.wanleung.android.Changjie.CandidateView>
 
-    <com.linkomnia.android.Changjie.ChangjieKeyboardView
+    <com.wanleung.android.Changjie.ChangjieKeyboardView
         android:id="@+id/keyboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
