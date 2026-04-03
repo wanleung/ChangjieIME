@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.linkomnia.android.Changjie.CandidateView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/horizontal"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/candidates_view_height"
+    android:gravity="fill">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/candidates_view_height"
+        android:gravity="fill">
+
+        <Button
+            android:id="@+id/arrow_left"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:textSize="@dimen/candidate_font_height"
+            android:textColor="@color/candidate_normal"
+            android:background="@drawable/button" />
+
+        <LinearLayout
+            android:id="@+id/wordbar"
+            android:orientation="horizontal"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:gravity="fill"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/arrow_right"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:textSize="@dimen/candidate_font_height"
+            android:textColor="@color/candidate_normal"
+            android:background="@drawable/button" />
+    </LinearLayout>
+
+</com.linkomnia.android.Changjie.CandidateView>

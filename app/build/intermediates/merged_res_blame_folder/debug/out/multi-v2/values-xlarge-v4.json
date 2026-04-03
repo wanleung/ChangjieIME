@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.linkomnia.android.Changjie.app-mergeDebugResources-37:/values-xlarge-v4/values-xlarge-v4.xml",
+            "map": [
+                {
+                    "source": "/home/wanleung/.gradle/caches/transforms-3/a577e8470c10c876d1d5c4227f67a139/transformed/appcompat-1.6.1/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,126,197,267,337,405",
+                        "endColumns": "70,70,69,69,67,67",
+                        "endOffsets": "121,192,262,332,400,468"
+                    }
+                },
+                {
+                    "source": "/home/wanleung/Projects/ChangjieIME/app/src/main/res/values-xlarge/dimens.xml",
+                    "from": {
+                        "startLines": "28,30,29,24,25,26,23,27",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "1099,1208,1152,905,948,1002,861,1049",
+                        "endColumns": "52,51,55,42,53,46,43,49",
+                        "endOffsets": "1147,1255,1203,943,997,1044,900,1094"
+                    },
+                    "to": {
+                        "startLines": "8,9,10,11,12,13,14,15",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "473,526,578,634,677,731,778,822",
+                        "endColumns": "52,51,55,42,53,46,43,49",
+                        "endOffsets": "521,573,629,672,726,773,817,867"
+                    }
+                }
+            ]
+        }
+    ]
+}

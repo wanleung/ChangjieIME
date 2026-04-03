@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+/*
+    Changjie Chinese Input Method for Android
+    Copyright (C) 2012 LinkOmnia Ltd.
+
+    Author: Wan Leung Wong (wanleung@linkomnia.com)
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+*/
+-->
+<resources>
+     <string name="ime_name">倉頡中文輸入法</string>
+     <string name="pref_about">關於本程式</string>
+     
+    <string name="setting_version_header">倉頡輸入法版本</string>
+    <string name="setting_version_title">使用倉頡第五代</string>
+    <string name="setting_version_summary">預定使用倉頡第三代</string>
+    <string name="setting_filter_header">附加字庫</string>
+    <string name="setting_filter_simplify_title">簡體中文</string>
+    <string name="setting_filter_simplify_summary">加入簡體中文字庫</string>
+    <string name="setting_quick_title">速成輸入</string>
+    <string name="setting_quick_summary">變更成為速成輸入</string>
+    <string name="setting_changjie_tradition_title">倉頡傳統模式</string>
+    <string name="setting_changjie_tradition_summary">在輸入倉頡碼時不會自動使用萬用字元搜尋類近倉頡碼之漢字</string>
+    
+    <string name="activity_setting_button">設定輸入法</string>
+    <string name="activity_info">歡迎使用本輸入法. 在使用此輸入法前, 請按"設定輸入法", 去啟用本輸入法程式.</string>
+    <string name="action_settings">設定</string>
+    <string name="subtype_zh_hk">繁體中文（香港）</string>
+</resources>
